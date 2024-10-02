@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>TaskIt</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="task-form" class="task-form">
+        <div class="flex">
+          <input
+            type="text"
+            id="task-title"
+            class="text-field"
+            placeholder="What should you do?"
+          />
+          <button class="btn btn--blue" data-event="add-task">&plus;</button>
+
+          <div id="edit-buttons" class="flex none">
+            <button class="btn fas fa-close" data-event="cancel-edit"></button>
+            <button
+              class="btn btn--blue fas fa-check"
+              data-event="confirm-edit"
+            ></button>
+          </div>
+        </div>
+
+        <div id="search-buttons" class="flex flex--wrap pd">
+          <button class="btn" data-event="list-all" data-search="all">
+            All
+          </button>
+          <button class="btn" data-event="list-complete" data-search="complete">
+            Complete
+          </button>
+          <button
+            class="btn"
+            data-event="list-incomplete"
+            data-search="incomplete"
+          >
+            Incomplete
+          </button>
+        </div>
+      </div>
+
+      <ul id="tasks" class="tasks-list"></ul>
+
+      <div id="no-tasks" class="image-container none">
+        <img
+          src="/undraw_accept_tasks_re_09mv.svg"
+          alt="illustration when no tasks (undraw)"
+        />
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

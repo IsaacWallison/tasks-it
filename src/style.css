@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(200, 50%, 96%);
+}
+
+img {
+  width: 100%;
+  max-width: 28rem;
+}
+
+a {
+  color: #646cff;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+label {
+  font-size: 2rem;
+}
+
+.btn--blue {
+  color: hsl(200, 50%, 96%);
+  background-color: #535bf2;
+}
+
+.btn--selected {
+  color: hsl(200, 50%, 96%);
+  background-color: #646cff;
+}
+
+.container {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.task-form {
+  background-color: hsl(200, 60%, 98%);
+  border-bottom: 1px solid rgb(0 0 0 / 0.2);
+  width: 100%;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.tasks-list {
+  width: 95%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-block: 1rem;
+}
+
+.task-form,
+.tasks-list {
+  max-width: 680px;
+}
+
+.task {
+  justify-content: space-between;
+  background-color: hsl(200, 60%, 98%);
+  padding: 2rem;
+  border-bottom: 1px solid rgb(0 0 0 / 0.2);
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.text-field {
+  width: 90%;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.2);
+  transition: box-shadow 1s;
+}
+
+.text-field:focus {
+  outline: none;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 0.2);
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[class*='flex'] {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.pd {
+  padding: 1rem;
+}
+
+.none {
+  display: none;
+}
+
+.stretch {
+  flex: 1;
+}
+
+.remove-animation {
+  animation: remove-task 1s forwards ease;
+}
+
+@keyframes remove-task {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    padding-block: 0;
+    overflow: hidden;
+  }
+}
