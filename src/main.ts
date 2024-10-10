@@ -5,8 +5,11 @@ import { renderTasks } from './modules/render-tasks';
 import { taskRepository } from './repository/task-repository';
 import './style.css';
 
+const taskTitle = select<HTMLInputElement>('#task-title');
+
 window.onload = () => {
   const tasks = taskRepository.getTasks();
+  taskTitle!.focus();
   renderTasks(tasks);
 };
 

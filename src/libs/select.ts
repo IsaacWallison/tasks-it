@@ -1,7 +1,7 @@
-export const select = (element: string): HTMLElement => {
-  return document.querySelector(element) as HTMLElement;
-};
+export function select<T extends HTMLElement>(element: string) {
+  return document.querySelector<T>(element);
+}
 
-export const selectAll = (elements: string) => {
-  return document.querySelectorAll(elements);
-};
+export function selectAll<T extends HTMLElement>(elements: string) {
+  return document.querySelectorAll<T>(elements);
+}

@@ -151,17 +151,17 @@ label {
 }
 
 .remove-animation {
-  animation: remove-task 1s forwards ease;
+  animation: remove-task 0.6s forwards ease;
 }
 
 @keyframes remove-task {
   0% {
-    opacity: 0.5;
+    opacity: 0.1;
   }
   100% {
     opacity: 0;
-    height: 0;
     padding-block: 0;
+    height: 0;
     overflow: hidden;
   }
 }

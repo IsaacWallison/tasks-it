@@ -4,8 +4,9 @@ import { Task } from '../types/task';
 import { renderTask } from './render-task';
 
 export const createTask = () => {
+  if (titleField.isEmpty()) return;
+
   const title = titleField.getValue();
-  if (!title.trim()) return;
 
   const task: Task = {
     id: Date.now(),
@@ -14,6 +15,7 @@ export const createTask = () => {
   };
 
   titleField.setValue('');
+  titleField.focus();
 
   taskRepository.setTask(task);
 

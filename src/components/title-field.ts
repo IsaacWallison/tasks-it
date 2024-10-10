@@ -8,4 +8,10 @@ export const titleField = {
   setValue(value: string) {
     this.element!.value = value;
   },
+  focus() {
+    this.element.focus();
+  },
+  isEmpty() {
+    return !this.getValue().trim().length;
+  },
 };
