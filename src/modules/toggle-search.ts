@@ -6,7 +6,7 @@ export const toggleSearchButton = () => {
     button.classList.remove('btn--selected')
   );
 
-  select(`button[data-search="${state.searchedTasks}"]`).classList.add(
+  select(`button[data-search="${state.searchedTasks}"]`)!.classList.add(
     'btn--selected'
   );
 };

@@ -13,8 +13,8 @@ export const editMode = (taskId: number) => {
 
   state.taskToBeEdited = taskFound;
 
-  select("button[data-event='add-task']").classList.add('none');
-  select('#edit-buttons').classList.remove('none');
+  select("button[data-event='add-task']")!.classList.add('none');
+  select('#edit-buttons')!.classList.remove('none');
 
   disableButtons("button[data-event='edit-mode']", true);
   disableButtons("button[data-event='delete-task']", true);

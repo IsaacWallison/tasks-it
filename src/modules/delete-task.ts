@@ -12,7 +12,7 @@ export const deleteTask = (taskId: number) => {
 
   taskRepository.setTasks(updatedTasks);
 
-  select(`button[data-id="${taskId}"]`)
+  select(`button[data-id="${taskId}"]`)!
     .closest('li')!
     .classList.add('remove-animation');
 

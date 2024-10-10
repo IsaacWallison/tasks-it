@@ -4,7 +4,7 @@ import { Task } from '../types/task';
 import { toggleSearchButton } from './toggle-search';
 
 export const renderTasks = (tasks: Task[]) => {
-  const noTasksImageContainer = select('#no-tasks');
+  const noTasksImageContainer = select('#no-tasks')!;
 
   noTasksImageContainer.classList.add('none');
 
